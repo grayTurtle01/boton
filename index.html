@@ -27,7 +27,7 @@
     </button>
 
     <script>
-      function foo(){
+      function loadButton(){
 
         WIDTH = window.innerWidth
         HEIGHT = window.innerHeight
@@ -39,6 +39,9 @@
 
         boton = document.querySelector('button')
         
+        boton.style.background = 'black'
+        boton.style.color = 'white'
+
         boton.style.width = WIDTH * 0.95 + 'px'
         boton.style.height = HEIGHT * 0.95 + 'px'
 
@@ -49,9 +52,27 @@
 
       }
       
-      window.onload = foo
-      window.onresize = foo
+      window.onload = loadButton
+      window.onresize = loadButton
 
+      boton = document.querySelector('button')
+      function toogleButton() {
+
+          if(boton.style.color == 'white'){
+              
+            boton.style.background = 'white'
+            boton.style.color = 'black'
+          }
+          else{
+               
+            boton.style.background = 'black'
+            boton.style.color = 'white'
+          }
+      }
+
+      boton.onclick = toogleButton
+
+      
       </script>
 
 </body>
