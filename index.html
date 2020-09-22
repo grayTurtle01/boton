@@ -5,11 +5,16 @@
   <title>Boton</title>
   <style>
   
+    body{
+      margin:0
+    }
+
+
     button{
       color: white;
       width: 200px;
       height: 200px;
-      background: lightblue;
+      background: black;
       border-radius: 10px;
       font-size: 20px;
     }
@@ -20,5 +25,34 @@
     <button>
       Click Me
     </button>
+
+    <script>
+      function foo(){
+
+        WIDTH = window.innerWidth
+        HEIGHT = window.innerHeight
+
+        margin_left = (WIDTH * 0.05)/2
+        margin_top = (HEIGHT * 0.05)/2
+
+        font_size = WIDTH * 0.15
+
+        boton = document.querySelector('button')
+        
+        boton.style.width = WIDTH * 0.95 + 'px'
+        boton.style.height = HEIGHT * 0.95 + 'px'
+
+        boton.style.marginLeft = margin_left + 'px'
+        boton.style.marginTop = margin_top + 'px'
+
+        boton.style.fontSize = font_size + 'px'
+
+      }
+      
+      window.onload = foo
+      window.onresize = foo
+
+      </script>
+
 </body>
 </html>
