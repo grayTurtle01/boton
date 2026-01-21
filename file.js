@@ -1,25 +1,24 @@
 function loadButton(){
+    boton = document.querySelector('button')
 
-  WIDTH = window.innerWidth
-  HEIGHT = window.innerHeight
+    boton.style.background = 'black'
+    boton.style.color = 'white'
 
-  margin_left = (WIDTH * 0.05)/2
-  margin_top = (HEIGHT * 0.05)/2
+    WIDTH = window.innerWidth
+    HEIGHT = window.innerHeight
 
-  font_size = WIDTH * 0.15
+    margin_left = (WIDTH * 0.5)/2
+    margin_top = (HEIGHT * 0.5)/2
 
-  boton = document.querySelector('button')
-  
-  boton.style.background = 'black'
-  boton.style.color = 'white'
+    font_size = WIDTH * 0.10
 
-  boton.style.width = WIDTH * 0.95 + 'px'
-  boton.style.height = HEIGHT * 0.95 + 'px'
+    boton.style.width = WIDTH * 0.5 + 'px'
+    boton.style.height = HEIGHT * 0.5 + 'px'
 
-  boton.style.marginLeft = margin_left + 'px'
-  boton.style.marginTop = margin_top + 'px'
+    boton.style.marginLeft = margin_left + 'px'
+    boton.style.marginTop = margin_top + 'px'
 
-  boton.style.fontSize = font_size + 'px'
+    boton.style.fontSize = font_size + 'px'
 
 }
 
@@ -27,6 +26,7 @@ window.onload = loadButton
 window.onresize = loadButton
 
 boton = document.querySelector('button')
+
 function toogleButton() {
 
     if(boton.style.color == 'white'){
